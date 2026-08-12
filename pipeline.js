@@ -22,14 +22,14 @@
   panel.hidden = true;
   panel.innerHTML = `
     <header class="month-intro pipeline-intro">
-      <div><p class="eyebrow">August execution · September runway</p><h2>Five moves executed.<br>Ten opportunities progressing.</h2></div>
+      <div><p class="eyebrow">August execution · September runway</p><h2>Seven moves executed.<br>Thirty-one opportunities progressing.</h2></div>
       <p>A consolidated August–September view across media reach, payments, rewards, API distribution and college communities. Executed items are separated clearly from the active pipeline.</p>
     </header>
 
     <div class="metric-grid pipeline-metrics">
-      <article><span>August executed</span><strong>5</strong><small>Recorded activations</small></article>
-      <article><span>In pipeline</span><strong>10</strong><small>Aug–Sep opportunity set</small></article>
-      <article><span>Workstreams</span><strong>4</strong><small>Media · fintech · API · campus</small></article>
+      <article><span>August executed</span><strong>7</strong><small>Recorded activations</small></article>
+      <article><span>In pipeline</span><strong>31</strong><small>Active opportunity set</small></article>
+      <article><span>Workstreams</span><strong>6</strong><small>Media · fintech · API · rewards · campus · community</small></article>
       <article><span>Planning window</span><strong>2 mo</strong><small>August and September</small></article>
     </div>
 
@@ -61,35 +61,72 @@
           <strong>05</strong><h4>Jai Steel</h4>
           <p>API partnership executed with the Jai Steel B2B portal.</p>
         </article>
+        <article class="execution-card">
+          <div><span class="status-chip done">Executed</span><small>Gifting</small></div>
+          <strong>06</strong><h4>IGP</h4>
+          <p>Gifting partnership executed during August.</p>
+        </article>
+        <article class="execution-card feature">
+          <div><span class="status-chip done">Live in August</span><small>UPI · Payments</small></div>
+          <strong>07</strong><h4>Paytm UPI Offer</h4>
+          <p>Paytm UPI offer went live in August.</p>
+        </article>
       </div>
     </section>
 
     <section class="pipeline-section opportunity-section">
       <div class="section-heading"><p>August–September runway</p><h3>Partnership pipeline</h3></div>
       <div class="pipeline-board">
-        <article>
-          <header><span>Media & reach</span><b>3</b></header>
-          <ul><li><i></i><div><strong>Red FM</strong><small>RJ mentions · Karnataka</small></div></li><li><i></i><div><strong>Sun TV</strong><small>Media partnership</small></div></li><li><i></i><div><strong>Jio</strong><small>Digital ecosystem</small></div></li></ul>
-        </article>
-        <article>
-          <header><span>Travel & API</span><b>3</b></header>
-          <ul><li><i></i><div><strong>Thomas Cook</strong><small>Travel partnership</small></div></li><li><i></i><div><strong>Rupenet</strong><small>Distribution integration</small></div></li><li><i></i><div><strong>CSC</strong><small>API distribution</small></div></li></ul>
-        </article>
-        <article>
-          <header><span>Fintech & rewards</span><b>3</b></header>
-          <ul><li><i></i><div><strong>Cache</strong><small>Partner opportunity</small></div></li><li><i></i><div><strong>BharatPe</strong><small>Payments ecosystem</small></div></li><li><i></i><div><strong>CRED</strong><small>Rewards ecosystem</small></div></li></ul>
-        </article>
-        <article>
-          <header><span>Campus</span><b>1</b></header>
-          <ul><li><i></i><div><strong>UNiDAYS</strong><small>College events</small></div></li></ul>
-        </article>
+        <article><header><span>Media & reach</span><b>4</b></header><ul>
+          <li><i></i><div><strong>Red FM</strong><small>RJ mentions · Karnataka</small></div></li>
+          <li><i></i><div><strong>Sun TV</strong><small>Media partnership</small></div></li>
+          <li><i></i><div><strong>Jio</strong><small>Digital ecosystem</small></div></li>
+          <li><i></i><div><strong>HPCL</strong><small>Petrol-pump visibility · Uttar Pradesh</small></div></li>
+        </ul></article>
+        <article><header><span>Travel & API</span><b>6</b></header><ul>
+          <li><i></i><div><strong>Thomas Cook</strong><small>Travel partnership</small></div></li>
+          <li><i></i><div><strong>Rupenet</strong><small>Distribution integration</small></div></li>
+          <li><i></i><div><strong>CSC</strong><small>API partnership</small></div></li>
+          <li><i></i><div><strong>Biltrip</strong><small>Travel partnership</small></div></li>
+          <li><i></i><div><strong>Customer Capital</strong><small>API partnership</small></div></li>
+          <li><i></i><div><strong>Akbar Travels B2B</strong><small>API partnership</small></div></li>
+        </ul></article>
+        <article><header><span>Fintech & payments</span><b>7</b></header><ul>
+          <li><i></i><div><strong>Cache</strong><small>Partner opportunity</small></div></li>
+          <li><i></i><div><strong>BharatPe</strong><small>Payments ecosystem</small></div></li>
+          <li><i></i><div><strong>CRED</strong><small>5 lakh codes for credit-card payment users</small></div></li>
+          <li><i></i><div><strong>YES Bank</strong><small>Bank campaign</small></div></li>
+          <li><i></i><div><strong>Canara Bank</strong><small>UPI offer</small></div></li>
+          <li><i></i><div><strong>Slice</strong><small>Fintech partnership</small></div></li>
+          <li><i></i><div><strong>Extraa</strong><small>Rewards / payments opportunity</small></div></li>
+        </ul></article>
+        <article><header><span>Rewards & enterprise</span><b>5</b></header><ul>
+          <li><i></i><div><strong>Pluxee Pro 6.0</strong><small>Enterprise rewards opportunity</small></div></li>
+          <li><i></i><div><strong>Xoxoday</strong><small>Rewards partnership</small></div></li>
+          <li><i></i><div><strong>Pluxee Gifting Season</strong><small>Seasonal gifting campaign</small></div></li>
+          <li><i></i><div><strong>Hero GoodLife</strong><small>Loyalty campaign</small></div></li>
+          <li><i></i><div><strong>Fitpass</strong><small>Lifestyle rewards partnership</small></div></li>
+        </ul></article>
+        <article><header><span>Campus & festivals</span><b>8</b></header><ul>
+          <li><i></i><div><strong>UNiDAYS</strong><small>College events</small></div></li>
+          <li><i></i><div><strong>Poornima University</strong><small>College event</small></div></li>
+          <li><i></i><div><strong>Festember</strong><small>Campus festival</small></div></li>
+          <li><i></i><div><strong>IIT Madras</strong><small>College event</small></div></li>
+          <li><i></i><div><strong>IIT Bombay · Thomso</strong><small>Campus festival opportunity</small></div></li>
+          <li><i></i><div><strong>IIM Indore</strong><small>College event</small></div></li>
+          <li><i></i><div><strong>LPU AI Summit</strong><small>Technology summit</small></div></li>
+          <li><i></i><div><strong>Hack 4.0</strong><small>Innovation event</small></div></li>
+        </ul></article>
+        <article><header><span>Founder community</span><b>1</b></header><ul>
+          <li><i></i><div><strong>ElevAra Founder Circle</strong><small>Founder-community event</small></div></li>
+        </ul></article>
       </div>
     </section>
 
     <section class="pipeline-note">
-      <div><span>NOW</span><strong>August execution</strong><p>Five activations recorded across sports media, payments, apps, events and B2B API distribution.</p></div>
+      <div><span>NOW</span><strong>August execution</strong><p>Seven activations recorded across sports media, payments, apps, gifting, events and B2B API distribution—including the Paytm UPI offer going live in August.</p></div>
       <i aria-hidden="true"></i>
-      <div><span>NEXT</span><strong>August–September pipeline</strong><p>Ten opportunities remain active. Item-level owners and committed dates were not supplied, so the dashboard retains the shared two-month planning window.</p></div>
+      <div><span>NEXT</span><strong>August–September pipeline</strong><p>Thirty-one opportunities remain active across six workstreams. Item-level owners and committed dates were not supplied, so the dashboard retains the shared August–September planning window.</p></div>
     </section>`;
   main.append(panel);
 
@@ -113,7 +150,7 @@
     .execution-card h4{position:relative;margin:42px 0 10px;max-width:80%;font-size:22px;line-height:1.15;letter-spacing:-.025em}
     .execution-card p{position:relative;max-width:75%;margin:0;color:var(--muted);font-size:12px;line-height:1.55}
     .execution-card.feature p{color:#c4d0dc}
-    .pipeline-board{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .pipeline-board{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .pipeline-board>article{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}
     .pipeline-board header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;background:#f3eefb;border-bottom:1px solid #e2d7f1}
     .pipeline-board header span{font-size:10px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#5a397e}
