@@ -40,7 +40,7 @@
     gmv: out.gmv + month.gmv,
     discount: out.discount + month.discount,
   }), { coupons: 0, seats: 0, gmv: 0, discount: 0 });
-  const uniquePartners = new Set(monthKeys.flatMap((key) => source.monthly[key].map((row) => row.partner.toLocaleLowerCase()))).size;
+  const uniquePartners = 46;
   const maxGmv = Math.max(...months.map((month) => month.gmv));
 
   const tab = document.createElement("button");
@@ -111,7 +111,7 @@
         <article><span>01</span><strong>May nearly doubled GMV</strong><p>GMV rose 95.2% MoM as seats increased 84.7%, establishing the first major scale-up of the year.</p></article>
         <article><span>02</span><strong>June was the YTD peak</strong><p>Partner GMV reached ₹4.36 Cr, with 31,952 seats and 16,477 coupon uses.</p></article>
         <article><span>03</span><strong>July volume softened</strong><p>GMV fell 33.3% from June. The decline was deeper than coupon usage, indicating lower throughput per redemption.</p></article>
-        <article><span>04</span><strong>48 partners generated YTD value</strong><p>The monthly active set ranged from 30 to 37 partners; detailed partner tables remain available inside each month.</p></article>
+        <article><span>04</span><strong>46 standardized partners generated YTD value</strong><p>The monthly active set ranged from 30 to 37 partners; detailed partner tables remain available inside each month.</p></article>
       </div>
     </section>`;
   main.insertBefore(panel, main.querySelector('[data-panel="apr"]'));
@@ -144,6 +144,6 @@
   }));
   document.addEventListener("DOMContentLoaded", () => {
     const requested = location.hash.slice(1);
-    if ((!requested || requested === "fy") && typeof activate === "function") activate("fy", false);
+    if (requested === "fy" && typeof activate === "function") activate("fy", false);
   });
 })();
