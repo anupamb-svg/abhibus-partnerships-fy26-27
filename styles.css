@@ -3,3 +3,9 @@
 @media(max-width:900px){.hero,.month-intro{grid-template-columns:1fr}.hero-snapshot{max-width:560px}.metric-grid,.highlight-grid{grid-template-columns:1fr 1fr}.dashboard-grid,.b2b-detail{grid-template-columns:1fr}.media-grid{grid-template-columns:1fr 1fr}.b2b-note{grid-template-columns:1fr}footer{grid-template-columns:1fr 1fr}footer small{grid-column:1/-1}}
 @media(max-width:620px){.topbar p{display:none}.hero{padding:58px 20px}.hero h1{font-size:47px}.hero-snapshot>strong{font-size:45px}.tabs{padding:0;top:72px;overflow:auto}.tabs button{min-width:100px;padding:15px}.tab-panel{padding:50px 20px 76px}.metric-grid,.highlight-grid,.b2b-summary{grid-template-columns:1fr}.media-grid{grid-template-columns:1fr;grid-auto-rows:270px}.media-grid figure.large{grid-column:span 1;grid-row:span 1}.trend-grid{height:auto;grid-template-columns:1fr}.trend-grid article{grid-template-columns:1fr auto;height:95px}.trend-grid i{grid-column:1/-1;height:18px}.trend-grid i span{height:100%!important;width:var(--w,70%)}footer{grid-template-columns:1fr;padding:35px 20px}footer small{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.media-grid img{transition:none}}
+
+.brand.brand-image{position:relative;display:block;flex:0 0 136px;width:136px;height:31px;overflow:hidden;letter-spacing:0;font-size:0}
+.brand.brand-image img{position:absolute;left:-25px;top:-26px;width:186px;max-width:none;height:auto}
+footer .brand.brand-image{width:150px;height:34px;flex-basis:150px}
+footer .brand.brand-image img{left:-28px;top:-29px;width:205px}
+@media(max-width:620px){.brand.brand-image{flex-basis:124px;width:124px;height:28px}.brand.brand-image img{left:-23px;top:-24px;width:170px}}
