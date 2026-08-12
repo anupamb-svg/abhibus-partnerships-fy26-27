@@ -29,4 +29,4 @@ tabs.forEach((tab, index) => {
 });
 
 const requested = location.hash.slice(1);
-if (["apr", "may", "jun", "jul", "b2b"].includes(requested)) activate(requested, false);
+if (["fy", "apr", "may", "jun", "jul", "b2b", "pipeline"].includes(requested)) activate(requested, false);

@@ -95,7 +95,7 @@
 
   const style = document.createElement("style");
   style.textContent = `
-    .tabs{grid-template-columns:repeat(6,1fr)}
+    .tabs{grid-template-columns:repeat(7,1fr)}
     .pipeline-intro .eyebrow{color:#7b4ac6}
     .pipeline-metrics article:nth-child(1){border-top:4px solid var(--green)}
     .pipeline-metrics article:nth-child(2){border-top:4px solid #7b4ac6}
