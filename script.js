@@ -2,8 +2,9 @@ const tabs = [...document.querySelectorAll('[role="tab"]')];
 const panels = [...document.querySelectorAll('[role="tabpanel"]')];
 
 function activate(name, updateHash = true) {
+  const fyMonth = ["apr", "may", "jun", "jul"].includes(name);
   tabs.forEach((tab) => {
-    const active = tab.dataset.tab === name;
+    const active = tab.dataset.tab === name || (fyMonth && tab.dataset.tab === "fy");
     tab.setAttribute("aria-selected", String(active));
     tab.tabIndex = active ? 0 : -1;
   });

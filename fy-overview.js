@@ -4,6 +4,15 @@
   const main = document.querySelector("main");
   if (!source || !nav || !main || document.querySelector('[data-tab="fy"]')) return;
 
+  ["apr", "may", "jun", "jul"].forEach((month) => {
+    nav.querySelector(`[data-tab="${month}"]`)?.remove();
+    const monthPanel = document.querySelector(`[data-panel="${month}"]`);
+    if (monthPanel) {
+      monthPanel.removeAttribute("aria-labelledby");
+      monthPanel.setAttribute("aria-label", `${month.charAt(0).toUpperCase() + month.slice(1)} 2026`);
+    }
+  });
+
   const monthKeys = ["apr", "may", "jun", "jul"];
   const labels = { apr: "April", may: "May", jun: "June", jul: "July" };
   const discounts = { apr: 1316642, may: 2137080, jun: 3127751, jul: 2898156 };
@@ -50,7 +59,7 @@
   tab.id = "tab-fy";
   tab.dataset.tab = "fy";
   tab.tabIndex = -1;
-  tab.innerHTML = "<span>00</span>FY 26–27";
+  tab.innerHTML = "<span>03</span>FY 26–27";
   nav.prepend(tab);
 
   const panel = document.createElement("section");
@@ -66,8 +75,9 @@
       <p>Compare monthly partnership performance on a consistent workbook-ledger basis. August execution is reported separately because August revenue, seats and coupon data are not yet available in the source.</p>
     </header>
 
-    <nav class="month-shortcuts" aria-label="Open FY 2026–27 monthly detail">
-      ${months.map((month, index) => `<button type="button" data-open-month="${month.key}"><span>${String(index + 1).padStart(2, "0")}</span><strong>${month.label}</strong><small>${compactMoney(month.gmv)} GMV</small></button>`).join("")}
+    <div class="month-nav-label"><span>FY 2026–27 monthly tabs</span><small>Select a month for detailed partner performance</small></div>
+    <nav class="month-shortcuts" aria-label="FY 2026–27 monthly tabs">
+      ${months.map((month, index) => `<button type="button" data-open-month="${month.key}"><span>${String(index + 1).padStart(2, "0")}</span><strong>${month.label} ’26</strong><small>${compactMoney(month.gmv)} GMV</small></button>`).join("")}
     </nav>
 
     <div class="metric-grid fy-metrics">
@@ -120,6 +130,7 @@
   style.textContent = `
     .tabs{grid-template-columns:repeat(7,1fr)}
     .fy-intro .eyebrow{color:#2f6fc1}
+    .month-nav-label{max-width:1450px;margin:0 auto 12px;display:flex;justify-content:space-between;gap:16px;align-items:end}.month-nav-label span{font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#2f6fc1}.month-nav-label small{color:var(--muted);font-size:10px}
     .month-shortcuts{max-width:1450px;margin:0 auto 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .month-shortcuts button{border:1px solid var(--line);border-radius:13px;background:#fff;padding:18px;text-align:left;cursor:pointer;box-shadow:0 8px 25px rgba(10,29,51,.04)}
     .month-shortcuts button:hover{border-color:#80a9d8;background:#f5f9fe}
@@ -135,7 +146,7 @@
     .fy-table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.fy-table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:12px}.fy-table th,.fy-table td{padding:15px 16px;border-bottom:1px solid var(--line);text-align:right}.fy-table th{color:var(--muted);font-size:9px;letter-spacing:.08em;text-transform:uppercase}.fy-table th:first-child,.fy-table td:first-child{text-align:left;position:sticky;left:0;background:#fff}.fy-table td:first-child button{appearance:none;border:0;background:transparent;padding:0;color:#2f6fc1;font:inherit;font-weight:850;cursor:pointer}.fy-table tfoot td{background:#0a1d33;color:#fff;border:0;font-weight:850}.fy-table tfoot td:first-child{background:#0a1d33}
     .readout-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.readout-grid article{min-height:210px;padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px}.readout-grid span{color:#2f6fc1;font-size:10px;font-weight:900}.readout-grid strong{display:block;margin:32px 0 10px;font-size:18px;line-height:1.25}.readout-grid p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
     @media(max-width:900px){.fy-trend-card{grid-template-columns:1fr}.readout-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:620px){.month-shortcuts{grid-template-columns:1fr 1fr}.fy-bars{height:300px;gap:8px}.bar-summary strong{font-size:15px}.bar-summary small{font-size:9px}.fy-trend-card{padding:18px}.readout-grid{grid-template-columns:1fr}}
+    @media(max-width:620px){.month-nav-label{align-items:flex-start;flex-direction:column}.month-shortcuts{grid-template-columns:1fr 1fr}.fy-bars{height:300px;gap:8px}.bar-summary strong{font-size:15px}.bar-summary small{font-size:9px}.fy-trend-card{padding:18px}.readout-grid{grid-template-columns:1fr}}
   `;
   document.head.append(style);
 
